@@ -1,8 +1,8 @@
--- 1
-SELECT a.time_ids, a.cantidad_rentas, r.customer_id 
+-- 1 
+SELECT a.time_ids, a.cantidad_rentas, r.customer_id
 FROM
 	(SELECT DATE_FORMAT(DATE(r.time_id),'%Y%m') AS time_ids,MAX(r.cantidad_rentas_mes_usuario) AS cantidad_rentas
-	FROM sakila_olap.rental_fact r 
+	FROM sakila_olap.rental_fact r
 	GROUP BY time_ids) a
 JOIN sakila_olap.rental_fact r ON r.cantidad_rentas_mes_usuario = a.cantidad_rentas AND a.time_ids = DATE_FORMAT(DATE(r.time_id),'%Y%m')
 GROUP BY time_ids, cantidad_rentas, customer_id;
@@ -30,7 +30,7 @@ FROM
 GROUP BY film_id, rental_rate
 ORDER BY total_sales ASC
 LIMIT 10;
- 
+
  -- 5
 SELECT DATE_FORMAT(DATE(r.time_id),'%Y%m%d'), a.cantidad_dia
 FROM
@@ -41,7 +41,7 @@ JOIN sakila_olap.rental_fact r ON r.cantidad_rentas_dia = a.cantidad_dia
 GROUP BY DATE_FORMAT(DATE(r.time_id),'%Y%m%d'), a.cantidad_dia;
 
 -- 6
-SELECT  r.film_id, a.peliculas_mes, a.pais 
+SELECT  r.film_id, a.peliculas_mes, a.pais
 FROM
 	(SELECT MAX(r.cantidad_rentas_pelicula_pais_mes) AS peliculas_mes, l.country_name AS pais
 	FROM sakila_olap.rental_fact r
