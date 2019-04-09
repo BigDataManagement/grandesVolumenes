@@ -6,8 +6,8 @@ INSERT INTO sakila_olap.store_dimension (store_id)
 SELECT store_id
 FROM sakila.store;
 
-INSERT INTO sakila_olap.customer_dimension (customer_id,first_name, last_name)
-SELECT customer_id,first_name, last_name
+INSERT INTO sakila_olap.customer_dimension (customer_id,first_name, last_name, email)
+SELECT customer_id,first_name, last_name, email
 FROM sakila.customer;
 
 INSERT INTO sakila_olap.location_dimension (location_id, city_name, country_name)
