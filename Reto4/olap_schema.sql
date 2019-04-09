@@ -37,9 +37,11 @@ PRIMARY KEY  (store_id)
 DROP TABLE IF EXISTS sakila_olap.film_dimension;
 CREATE TABLE sakila_olap.film_dimension (
 film_id smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+category_id  tinyint(3) NOT NULL, 
 title varchar(255) NOT NULL,
+category_name varchar(25) NOT NULL,
 rental_rate decimal(4,2) NOT NULL DEFAULT '4.99',
-PRIMARY KEY (film_id)
+PRIMARY KEY (film_id, category_id)
 );
 
 DROP TABLE IF EXISTS sakila_olap.location_dimension;
