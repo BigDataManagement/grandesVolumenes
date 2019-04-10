@@ -8,7 +8,11 @@ JOIN sakila_olap.rental_fact r ON r.cantidad_rentas_mes_usuario = a.cantidad_ren
 GROUP BY time_ids, cantidad_rentas, customer_id;
 
 -- 2
-
+SELECT f.category_name ,COUNT(f.category_id), DATE_FORMAT(DATE(r.time_id),'%Y') as year, DATE_FORMAT(DATE(r.time_id),'%m') AS month
+FROM sakila_olap.rental_fact r
+JOIN sakila_olap.film_dimension f ON f.film_id = r.film_id
+GROUP BY f.category_name, year, month
+HAVING month = '06';
 -- 3
 SELECT a.film_id, a.rental_rate,SUM(a.cantidad_rentas_pelicula_year) AS total_sales
 FROM
@@ -74,6 +78,46 @@ JOIN sakila_olap.rental_fact r ON c.customer_i = r.customer_id
 WHERE c.rentas_mes = r.cantidad_rentas_mes_usuario;
 
 -- 9
+SELECT category_ids, customer_ids FROM (
+SELECT c.customer_ids AS usuario, MAX(c.contador_category) as maximo
+FROM 
+	(SELECT b.customer_id customer_ids, COUNT(f.category_id) AS contador_category, f.category_id category_ids
+	FROM 
+		(SELECT *
+		FROM sakila_olap.rental_fact r 
+		WHERE r.customer_id IN (
+			SELECT a.customer_id FROM (
+				SELECT r.customer_id, COUNT(r.customer_id) AS total_ventas_usuario
+				FROM sakila_olap.rental_fact r
+				GROUP BY r.customer_id
+				ORDER BY total_ventas_usuario DESC
+				LIMIT 10) a
+			)
+		) b
+	JOIN sakila_olap.film_dimension f ON b.film_id = f.film_id
+	GROUP BY b.customer_id, f.category_id
+    ORDER BY contador_category desc) c
+GROUP BY usuario ) a 
+JOIN (SELECT b.customer_id customer_ids, COUNT(f.category_id) AS contador_category, f.category_id category_ids
+	FROM 
+		(SELECT *
+		FROM sakila_olap.rental_fact r 
+		WHERE r.customer_id IN (
+			SELECT a.customer_id FROM (
+				SELECT r.customer_id, COUNT(r.customer_id) AS total_ventas_usuario
+				FROM sakila_olap.rental_fact r
+				GROUP BY r.customer_id
+				ORDER BY total_ventas_usuario DESC
+				LIMIT 10) a
+			)
+		) b
+	JOIN sakila_olap.film_dimension f ON b.film_id = f.film_id
+	GROUP BY b.customer_id, f.category_id
+    ORDER BY contador_category desc) b
+ON a.usuario = b.customer_ids 
+WHERE maximo = contador_category;
+
+	
 
 -- 10
 SELECT COUNT(r.rental_id) AS total_ventas, r.store_id
