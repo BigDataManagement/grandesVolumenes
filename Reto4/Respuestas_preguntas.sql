@@ -57,6 +57,7 @@ GROUP BY peliculas_mes, film_id, pais
 ORDER BY pais;
 
 -- 7
+select * from sakila_olap.customer_dimension;
 
 -- 8
 SELECT DISTINCT c.customer_i, c.rentas_mes, DATE_FORMAT(DATE(r.time_id),'%Y%m') AS fecha
