@@ -1,5 +1,7 @@
 # ETL usando CloverDX
-
+### Integrantes:
+- Daniel Hoyos Ospina
+- Edwin Montoya Jaramillo
 ### Orden de ejecución:
 ```
 1. Correr olap_schema.sql en mysql
