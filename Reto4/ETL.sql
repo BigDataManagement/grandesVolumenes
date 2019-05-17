@@ -60,3 +60,20 @@ JOIN (
 	GROUP BY t.time_id, f.film_id, loc.country_name) r
 	GROUP BY time_ids, film_ids, country_name
 ) cant_mes_pelicula_pais ON DATE_FORMAT(basic.time_id,'%Y%m') = cant_mes_pelicula_pais.time_ids AND basic.film_id = cant_mes_pelicula_pais.film_ids AND basic.country = cant_mes_pelicula_pais.country_name;
+
+INSERT INTO sakila_olap.payment_fact (payment_id, time_id, cantidad_pagos_dia)
+SELECT basic.payment_id, basic.time_id, calculated.cantidad_pagos_dia
+FROM (
+-- payment basic DF 
+	SELECT p.payment_id , t.time_id
+	FROM sakila.payment p
+	JOIN sakila_olap.time_dimension t ON date(p.payment_date) = t.db_date 
+    ) basic
+JOIN (
+-- cantidad pagos dia
+	SELECT t.time_id, COUNT(*) AS cantidad_pagos_dia
+	FROM sakila.payment p 
+	JOIN sakila_olap.time_dimension t ON DATE(p.payment_date) = t.db_date
+	GROUP BY t.time_id
+	) calculated
+ON basic.time_id = calculated.time_id;

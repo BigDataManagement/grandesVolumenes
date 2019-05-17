@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Graph author="hoyos" created="Thu May 16 12:34:04 COT 2019" guiVersion="5.2.0.30" id="1558039757947" licenseCode="CLP1DUNIVE78436493EX" name="sandbox" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata15">
+<Record fieldDelimiter="|" name="Out1" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" trim="true" type="integer"/>
+<Field name="film_id" size="5" trim="true" type="integer"/>
+<Field name="customer_id" size="5" trim="true" type="integer"/>
+<Field name="store_id" size="3" trim="true" type="integer"/>
+<Field name="city_id" size="5" trim="true" type="integer"/>
+<Field name="time_id" size="11" trim="true" type="integer"/>
+<Field name="country" size="50" type="string"/>
+<Field name="cantidad_rentas_dia" size="21" trim="true" type="long"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata20">
+<Record fieldDelimiter="|" name="Out1" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" trim="true" type="integer"/>
+<Field name="film_id" size="5" trim="true" type="integer"/>
+<Field name="customer_id" size="5" trim="true" type="integer"/>
+<Field name="store_id" size="3" trim="true" type="integer"/>
+<Field name="city_id" size="5" trim="true" type="integer"/>
+<Field name="time_id" size="11" trim="true" type="integer"/>
+<Field name="country" size="50" type="string"/>
+<Field name="year" size="11" trim="true" type="integer"/>
+<Field name="month" size="11" trim="true" type="integer"/>
+<Field name="day" size="11" trim="true" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" trim="true" type="long"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata22">
+<Record fieldDelimiter="|" name="Out2" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" trim="true" type="integer"/>
+<Field name="film_id" size="5" trim="true" type="integer"/>
+<Field name="customer_id" size="5" trim="true" type="integer"/>
+<Field name="store_id" size="3" trim="true" type="integer"/>
+<Field name="city_id" size="5" trim="true" type="integer"/>
+<Field name="time_id" size="11" trim="true" type="integer"/>
+<Field name="country" size="50" type="string"/>
+<Field name="year" size="11" trim="true" type="integer"/>
+<Field name="month" size="11" trim="true" type="integer"/>
+<Field name="day" size="11" trim="true" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" trim="true" type="long"/>
+<Field name="cantidad_rentas_dia_usuario" size="21" trim="true" type="long"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata24">
+<Record fieldDelimiter="|" name="Out3" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" trim="true" type="integer"/>
+<Field name="film_id" size="5" trim="true" type="integer"/>
+<Field name="customer_id" size="5" trim="true" type="integer"/>
+<Field name="store_id" size="3" trim="true" type="integer"/>
+<Field name="city_id" size="5" trim="true" type="integer"/>
+<Field name="time_id" size="11" trim="true" type="integer"/>
+<Field name="country" size="50" type="string"/>
+<Field name="year" size="11" trim="true" type="integer"/>
+<Field name="month" size="11" trim="true" type="integer"/>
+<Field name="day" size="11" trim="true" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" trim="true" type="long"/>
+<Field name="cantidad_rentas_dia_usuario" size="21" trim="true" type="long"/>
+<Field length="42" name="cantidad_rentas_mes_usuario" scale="0" trim="true" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata28">
+<Record fieldDelimiter="|" name="Out3" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" trim="true" type="integer"/>
+<Field name="film_id" size="5" trim="true" type="integer"/>
+<Field name="customer_id" size="5" trim="true" type="integer"/>
+<Field name="store_id" size="3" trim="true" type="integer"/>
+<Field name="city_id" size="5" trim="true" type="integer"/>
+<Field name="time_id" size="11" trim="true" type="integer"/>
+<Field name="country" size="50" type="string"/>
+<Field name="year" size="11" trim="true" type="integer"/>
+<Field name="month" size="11" trim="true" type="integer"/>
+<Field name="day" size="11" trim="true" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" trim="true" type="long"/>
+<Field name="cantidad_rentas_dia_usuario" size="21" trim="true" type="long"/>
+<Field length="42" name="cantidad_rentas_mes_usuario" scale="0" trim="true" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata27">
+<Record fieldDelimiter="|" name="Out4" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" trim="true" type="integer"/>
+<Field name="film_id" size="5" trim="true" type="integer"/>
+<Field name="customer_id" size="5" trim="true" type="integer"/>
+<Field name="store_id" size="3" trim="true" type="integer"/>
+<Field name="city_id" size="5" trim="true" type="integer"/>
+<Field name="time_id" size="11" trim="true" type="integer"/>
+<Field name="country" size="50" type="string"/>
+<Field name="year" size="11" trim="true" type="integer"/>
+<Field name="month" size="11" trim="true" type="integer"/>
+<Field name="day" size="11" trim="true" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" trim="true" type="long"/>
+<Field name="cantidad_rentas_dia_usuario" size="21" trim="true" type="long"/>
+<Field length="42" name="cantidad_rentas_mes_usuario" scale="0" trim="true" type="decimal"/>
+<Field length="42" name="cantidad_rentas_peliculas_ano" scale="0" trim="true" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata30">
+<Record fieldDelimiter="|" name="Out5" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" trim="true" type="integer"/>
+<Field name="film_id" size="5" trim="true" type="integer"/>
+<Field name="customer_id" size="5" trim="true" type="integer"/>
+<Field name="store_id" size="3" trim="true" type="integer"/>
+<Field name="city_id" size="5" trim="true" type="integer"/>
+<Field name="time_id" size="11" trim="true" type="integer"/>
+<Field name="country" size="50" type="string"/>
+<Field name="year" size="11" trim="true" type="integer"/>
+<Field name="month" size="11" trim="true" type="integer"/>
+<Field name="day" size="11" trim="true" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" trim="true" type="long"/>
+<Field name="cantidad_rentas_dia_usuario" size="21" trim="true" type="long"/>
+<Field length="42" name="cantidad_rentas_mes_usuario" scale="0" trim="true" type="decimal"/>
+<Field length="42" name="cantidad_rentas_peliculas_ano" scale="0" trim="true" type="decimal"/>
+<Field length="42" name="cantidad_rentas_peliculas_mes_pais" scale="0" trim="true" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata31">
+<Record fieldDelimiter="|" name="Out5" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" trim="true" type="integer"/>
+<Field name="film_id" size="5" trim="true" type="integer"/>
+<Field name="customer_id" size="5" trim="true" type="integer"/>
+<Field name="store_id" size="3" trim="true" type="integer"/>
+<Field name="city_id" size="5" trim="true" type="integer"/>
+<Field name="time_id" size="11" trim="true" type="integer"/>
+<Field name="country" size="50" type="string"/>
+<Field name="year" size="11" trim="true" type="integer"/>
+<Field name="month" size="11" trim="true" type="integer"/>
+<Field name="day" size="11" trim="true" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" trim="true" type="long"/>
+<Field name="cantidad_rentas_dia_usuario" size="21" trim="true" type="long"/>
+<Field length="42" name="cantidad_rentas_mes_usuario" scale="0" trim="true" type="decimal"/>
+<Field length="42" name="cantidad_rentas_peliculas_ano" scale="0" trim="true" type="decimal"/>
+<Field length="42" name="cantidad_rentas_peliculas_mes_pais" scale="0" trim="true" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata32">
+<Record fieldDelimiter="|" name="Out5" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" trim="true" type="integer"/>
+<Field name="film_id" size="5" trim="true" type="integer"/>
+<Field name="customer_id" size="5" trim="true" type="integer"/>
+<Field name="store_id" size="3" trim="true" type="integer"/>
+<Field name="city_id" size="5" trim="true" type="integer"/>
+<Field name="time_id" size="11" trim="true" type="integer"/>
+<Field name="country" size="50" type="string"/>
+<Field name="year" size="11" trim="true" type="integer"/>
+<Field name="month" size="11" trim="true" type="integer"/>
+<Field name="day" size="11" trim="true" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" trim="true" type="long"/>
+<Field name="cantidad_rentas_dia_usuario" size="21" trim="true" type="long"/>
+<Field length="42" name="cantidad_rentas_mes_usuario" scale="0" trim="true" type="decimal"/>
+<Field length="42" name="cantidad_rentas_peliculas_ano" scale="0" trim="true" type="decimal"/>
+<Field length="42" name="cantidad_rentas_peliculas_mes_pais" scale="0" trim="true" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata33">
+<Record fieldDelimiter="|" name="Out5" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" trim="true" type="integer"/>
+<Field name="film_id" size="5" trim="true" type="integer"/>
+<Field name="customer_id" size="5" trim="true" type="integer"/>
+<Field name="store_id" size="3" trim="true" type="integer"/>
+<Field name="city_id" size="5" trim="true" type="integer"/>
+<Field name="time_id" size="11" trim="true" type="integer"/>
+<Field name="country" size="50" type="string"/>
+<Field name="year" size="11" trim="true" type="integer"/>
+<Field name="month" size="11" trim="true" type="integer"/>
+<Field name="day" size="11" trim="true" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" trim="true" type="long"/>
+<Field name="cantidad_rentas_dia_usuario" size="21" trim="true" type="long"/>
+<Field length="42" name="cantidad_rentas_mes_usuario" scale="0" trim="true" type="decimal"/>
+<Field length="42" name="cantidad_rentas_peliculas_ano" scale="0" trim="true" type="decimal"/>
+<Field length="42" name="cantidad_rentas_peliculas_mes_pais" scale="0" trim="true" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata34">
+<Record fieldDelimiter=";" name="p" recordDelimiter="\n" type="delimited">
+<Field name="payment_id" size="5" type="integer"/>
+<Field name="time_id" size="11" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata36">
+<Record fieldDelimiter=";" name="p" recordDelimiter="\n" type="delimited">
+<Field name="payment_id" size="5" type="integer"/>
+<Field name="time_id" size="11" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata38">
+<Record fieldDelimiter="|" name="paymentOut" recordDelimiter="\n" type="delimited">
+<Field name="payment_id" size="5" trim="true" type="integer"/>
+<Field name="time_id" size="11" trim="true" type="integer"/>
+<Field name="cantidad_pagos_dia" size="21" trim="true" type="long"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata6">
+<Record fieldDelimiter=";" name="r" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" type="integer"/>
+<Field name="film_id" size="5" type="integer"/>
+<Field name="customer_id" size="5" type="integer"/>
+<Field name="store_id" size="3" type="integer"/>
+<Field name="city_id" size="5" type="integer"/>
+<Field name="time_id" size="11" type="integer"/>
+<Field name="country" size="50" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata9">
+<Record fieldDelimiter=";" name="r" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" type="integer"/>
+<Field name="film_id" size="5" type="integer"/>
+<Field name="customer_id" size="5" type="integer"/>
+<Field name="store_id" size="3" type="integer"/>
+<Field name="city_id" size="5" type="integer"/>
+<Field name="time_id" size="11" type="integer"/>
+<Field name="country" size="50" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata12">
+<Record fieldDelimiter=";" name="r" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" type="integer"/>
+<Field name="film_id" size="5" type="integer"/>
+<Field name="customer_id" size="5" type="integer"/>
+<Field name="store_id" size="3" type="integer"/>
+<Field name="city_id" size="5" type="integer"/>
+<Field name="time_id" size="11" type="integer"/>
+<Field name="country" size="50" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata14">
+<Record fieldDelimiter=";" name="r" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" type="integer"/>
+<Field name="film_id" size="5" type="integer"/>
+<Field name="customer_id" size="5" type="integer"/>
+<Field name="store_id" size="3" type="integer"/>
+<Field name="city_id" size="5" type="integer"/>
+<Field name="time_id" size="11" type="integer"/>
+<Field name="country" size="50" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata18">
+<Record fieldDelimiter=";" name="r" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" type="integer"/>
+<Field name="film_id" size="5" type="integer"/>
+<Field name="customer_id" size="5" type="integer"/>
+<Field name="store_id" size="3" type="integer"/>
+<Field name="city_id" size="5" type="integer"/>
+<Field name="time_id" size="11" type="integer"/>
+<Field name="country" size="50" type="string"/>
+<Field name="year" size="11" type="integer"/>
+<Field name="month" size="11" type="integer"/>
+<Field name="day" size="11" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata3">
+<Record fieldDelimiter=";" name="rental" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" type="integer"/>
+<Field format="yyyy-MM-dd HH:mm:ss" name="rental_date" size="19" type="date"/>
+<Field name="inventory_id" size="8" type="integer"/>
+<Field name="customer_id" size="5" type="integer"/>
+<Field format="yyyy-MM-dd HH:mm:ss" name="return_date" size="19" type="date"/>
+<Field name="staff_id" size="3" type="integer"/>
+<Field format="yyyy-MM-dd HH:mm:ss" name="last_update" size="19" type="date"/>
+<Field format="yyyy-MM-dd" name="rent_date" size="10" type="date"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata4">
+<Record fieldDelimiter=";" name="rental" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" type="integer"/>
+<Field format="yyyy-MM-dd HH:mm:ss" name="rental_date" size="19" type="date"/>
+<Field name="inventory_id" size="8" type="integer"/>
+<Field name="customer_id" size="5" type="integer"/>
+<Field format="yyyy-MM-dd HH:mm:ss" name="return_date" size="19" type="date"/>
+<Field name="staff_id" size="3" type="integer"/>
+<Field format="yyyy-MM-dd HH:mm:ss" name="last_update" size="19" type="date"/>
+<Field format="yyyy-MM-dd" name="rent_date" size="10" type="date"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata5">
+<Record fieldDelimiter=";" name="rental" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" type="integer"/>
+<Field format="yyyy-MM-dd HH:mm:ss" name="rental_date" size="19" type="date"/>
+<Field name="inventory_id" size="8" type="integer"/>
+<Field name="customer_id" size="5" type="integer"/>
+<Field format="yyyy-MM-dd HH:mm:ss" name="return_date" size="19" type="date"/>
+<Field name="staff_id" size="3" type="integer"/>
+<Field format="yyyy-MM-dd HH:mm:ss" name="last_update" size="19" type="date"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata1">
+<Record fieldDelimiter=";" name="rental" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" trim="true" type="integer"/>
+<Field format="yyyy-MM-dd HH:mm:ss" name="rental_date" size="19" trim="true" type="date"/>
+<Field name="inventory_id" size="8" trim="true" type="integer"/>
+<Field name="customer_id" size="5" trim="true" type="integer"/>
+<Field format="yyyy-MM-dd HH:mm:ss" name="return_date" size="19" trim="true" type="date"/>
+<Field name="staff_id" size="3" trim="true" type="integer"/>
+<Field format="yyyy-MM-dd HH:mm:ss" name="last_update" size="19" trim="true" type="date"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata17">
+<Record fieldDelimiter=";" name="rental" recordDelimiter="\n" type="delimited">
+<Field name="date1" size="8" type="string"/>
+<Field name="cantidad_rentas_dia_usuario" size="21" type="long"/>
+<Field name="customer_id" size="5" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata23">
+<Record fieldDelimiter=";" name="SELECT" recordDelimiter="\n" type="delimited">
+<Field name="year" size="11" type="integer"/>
+<Field name="month" size="11" type="integer"/>
+<Field length="42" name="cantidad_rentas_mes_usuario" scale="0" type="decimal"/>
+<Field name="customer_ids" size="5" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata25">
+<Record fieldDelimiter=";" name="SELECT" recordDelimiter="\n" type="delimited">
+<Field name="year" size="11" type="integer"/>
+<Field name="month" size="11" type="integer"/>
+<Field length="42" name="cantidad_rentas_mes_usuario" scale="0" type="decimal"/>
+<Field name="customer_id" size="5" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata26">
+<Record fieldDelimiter=";" name="SELECT" recordDelimiter="\n" type="delimited">
+<Field name="year" size="11" type="integer"/>
+<Field length="42" name="cantidad_rentas_peliculas_ano" scale="0" type="decimal"/>
+<Field name="film_id" size="5" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata29">
+<Record fieldDelimiter=";" name="SELECT" recordDelimiter="\n" type="delimited">
+<Field name="year" size="11" type="integer"/>
+<Field name="month" size="11" type="integer"/>
+<Field length="42" name="cantidad_rentas_peliculas_mes_pais" scale="0" type="decimal"/>
+<Field name="film_id" size="5" type="integer"/>
+<Field name="country_name" size="50" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata0">
+<Record fieldDelimiter=";" name="time_dimension" recordDelimiter="\n" type="delimited">
+<Field name="time_id" size="11" type="integer"/>
+<Field format="yyyy-MM-dd" name="db_date" size="10" type="date"/>
+<Field name="year" size="11" type="integer"/>
+<Field name="month" size="11" type="integer"/>
+<Field name="day" size="11" type="integer"/>
+<Field name="quarter" size="11" type="integer"/>
+<Field name="week" size="11" type="integer"/>
+<Field name="day_name" size="9" type="string"/>
+<Field name="month_name" size="9" type="string"/>
+<Field name="holiday_flag" size="1" type="string"/>
+<Field name="weekend_flag" size="1" type="string"/>
+<Field name="event" size="50" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata7">
+<Record fieldDelimiter=";" name="time_dimension" recordDelimiter="\n" type="delimited">
+<Field name="time_id" size="11" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" type="long"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata8">
+<Record fieldDelimiter=";" name="time_dimension" recordDelimiter="\n" type="delimited">
+<Field name="time_id" size="11" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" type="long"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata10">
+<Record fieldDelimiter=";" name="time_dimension" recordDelimiter="\n" type="delimited">
+<Field name="time_id" size="11" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" type="long"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata11">
+<Record fieldDelimiter=";" name="time_dimension" recordDelimiter="\n" type="delimited">
+<Field name="time_id" size="11" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" type="long"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata13">
+<Record fieldDelimiter=";" name="time_dimension" recordDelimiter="\n" type="delimited">
+<Field name="time_id" size="11" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" type="long"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata16">
+<Record fieldDelimiter=";" name="time_dimension" recordDelimiter="\n" type="delimited">
+<Field name="time_id" size="11" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" type="long"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata19">
+<Record fieldDelimiter=";" name="time_dimension" recordDelimiter="\n" type="delimited">
+<Field name="time_id" size="11" type="integer"/>
+<Field name="cantidad_rentas_dia" size="21" type="long"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata21">
+<Record fieldDelimiter=";" name="time_dimension" recordDelimiter="\n" type="delimited">
+<Field name="year" size="11" type="integer"/>
+<Field name="month" size="11" type="integer"/>
+<Field name="day" size="11" type="integer"/>
+<Field name="cantidad_rentas_dia_usuario" size="21" type="long"/>
+<Field name="customer_id" size="5" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata35">
+<Record fieldDelimiter=";" name="time_dimension" recordDelimiter="\n" type="delimited">
+<Field name="time_id" size="11" type="integer"/>
+<Field name="cantidad_pagos_dia" size="21" type="long"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata37">
+<Record fieldDelimiter=";" name="time_dimension" recordDelimiter="\n" type="delimited">
+<Field name="time_id" size="11" type="integer"/>
+<Field name="cantidad_pagos_dia" size="21" type="long"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata2">
+<Record fieldDelimiter="|" name="TIME_RENTAL_RECORD" recordDelimiter="\n" type="delimited">
+<Field name="rental_id" size="11" trim="true" type="integer"/>
+<Field name="customer_id" size="5" trim="true" type="integer"/>
+<Field name="time_id" size="11" trim="true" type="integer"/>
+</Record>
+</Metadata>
+<Connection database="MYSQL" dbURL="jdbc:mysql://localhost:3306/sakila" id="JDBC0" jdbcSpecific="MYSQL" name="in" password="passw0rd" type="JDBC" useSSL="false" user="root"/>
+<Connection database="MYSQL" dbURL="jdbc:mysql://localhost:3306/sakila_olap" id="JDBC1" jdbcSpecific="MYSQL" name="out" password="passw0rd" type="JDBC" useSSL="false" user="root"/>
+<GraphParameters>
+<GraphParameterFile fileURL="workspace.prm"/>
+</GraphParameters>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node dbConnection="JDBC0" guiName="DBInputBasicData" guiX="112" guiY="88" id="DBINPUT_BASIC_DATA" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[	SELECT r.rental_id, f.film_id, r.customer_id, s.store_id, city.city_id, t.time_id, co.country, t.year, t.month, t.day
+	FROM sakila.rental r 
+	JOIN sakila.inventory i on r.inventory_id = i. inventory_id 
+	JOIN sakila.film f ON i.film_id = f.film_id 
+	JOIN sakila.store s ON i.store_id = s.store_id 
+	JOIN sakila.address ON s.address_id = address.address_id 
+	JOIN sakila.city ON address.city_id = city.city_id 
+    JOIN sakila.country co ON city.country_id = co.country_id
+	JOIN sakila_olap.time_dimension t ON date(r.rental_date) = t.db_date]]></attr>
+</Node>
+<Node dbConnection="JDBC0" guiName="DBInputBasicPayment" guiX="95" guiY="684" id="DBINPUT_BASIC_PAYMENT" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[SELECT p.payment_id , t.time_id
+	FROM sakila.payment p
+	JOIN sakila_olap.time_dimension t ON date(p.payment_date) = t.db_date]]></attr>
+</Node>
+<Node dbConnection="JDBC0" guiName="DBInputPagosDia" guiX="114" guiY="773" id="DBINPUT_PAGOS_DIA" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[SELECT t.time_id, COUNT(*) AS cantidad_pagos_dia
+	FROM sakila.payment p 
+	JOIN sakila_olap.time_dimension t ON DATE(p.payment_date) = t.db_date
+	GROUP BY t.time_id]]></attr>
+</Node>
+<Node dbConnection="JDBC0" guiName="DBInputRentasDia" guiX="107" guiY="180" id="DBINPUT_RENTAS_DIA" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[SELECT t.time_id, COUNT(*) AS cantidad_rentas_dia
+	FROM sakila.rental r 
+	JOIN sakila_olap.time_dimension t ON DATE(r.rental_date) = t.db_date
+	GROUP BY t.time_id]]></attr>
+</Node>
+<Node dbConnection="JDBC0" guiName="DBInputRentasDiaUsuario" guiX="85" guiY="283" id="DBINPUT_RENTAS_DIA_USUARIO" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[	SELECT  t.year, t.month, t.day, COUNT(*) AS cantidad_rentas_dia_usuario, r.customer_id
+	FROM sakila.rental r
+	JOIN sakila_olap.time_dimension t ON DATE(r.rental_date) = t.db_date
+	GROUP BY year, month, day, r.customer_id]]></attr>
+</Node>
+<Node dbConnection="JDBC0" guiName="DBInputRentasMesUsuario" guiX="87" guiY="376" id="DBINPUT_RENTAS_MES_USUARIO" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[SELECT year, month, SUM(cantidad_rentas_dia) AS cantidad_rentas_mes_usuario, cust customer_id 
+	FROM (SELECT t.year, t.month, t.day, COUNT(*) AS cantidad_rentas_dia, r.customer_id as cust
+			FROM sakila.rental r
+			JOIN sakila_olap.time_dimension t ON DATE(r.rental_date) = t.db_date
+			GROUP BY year, month, day, cust) r 
+	GROUP BY year, month, customer_id]]></attr>
+</Node>
+<Node dbConnection="JDBC0" guiName="DBInputRentasPeliculasAno" guiX="83" guiY="466" id="DBINPUT_RENTAS_PELICULAS_ANO" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[SELECT year, SUM(cantidad_rentas_dia) AS cantidad_rentas_peliculas_ano, film film_id  
+	FROM (SELECT t.day, t.month, t.year, COUNT(*) AS cantidad_rentas_dia, f.film_id film
+	FROM sakila.rental r
+	JOIN sakila_olap.time_dimension t ON DATE(r.rental_date) = t.db_date
+	JOIN sakila.inventory i ON  r.inventory_id = i.inventory_id 
+	JOIN sakila.film f ON i.film_id = f.film_id
+	GROUP BY year, month, day, film) r
+	GROUP BY year, film_id]]></attr>
+</Node>
+<Node dbConnection="JDBC0" guiName="DBInputRentasPeliculasMesPais" guiX="70" guiY="579" id="DBINPUT_RENTAS_PELICULAS_MES_PAIS" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[  SELECT year, month, SUM(r.cantidad_rentas_dia) AS cantidad_rentas_peliculas_mes_pais, r.film film_id, r.country_name
+	FROM (SELECT t.day, t.month, t.year, COUNT(*) AS cantidad_rentas_dia, f.film_id film, loc.country_name
+	FROM sakila.rental r
+	JOIN sakila_olap.time_dimension t ON DATE(r.rental_date) = t.db_date
+	JOIN sakila.inventory i ON  r.inventory_id = i.inventory_id 
+	JOIN sakila.store s ON  i.store_id = s.store_id 
+	JOIN sakila.address  ON  s.address_id = address.address_id 
+    JOIN sakila.city ON address.city_id = city.city_id
+	JOIN sakila.film f ON i.film_id = f.film_id
+    JOIN sakila_olap.location_dimension loc ON city.city_id = loc.location_id
+	GROUP BY year, month, day, film, loc.country_name) r
+	GROUP BY year, month, film_id, country_name]]></attr>
+</Node>
+<Node dbConnection="JDBC1" dbTable="rental_fact" fieldMap="$rental_id:=rental_id;$film_id:=film_id;$customer_id:=customer_id;$store_id:=store_id;$time_id:=time_id;$city_id:=location_id;$cantidad_rentas_dia:=cantidad_rentas_dia;$cantidad_rentas_dia_usuario:=cantidad_rentas_dia_usuario;$cantidad_rentas_mes_usuario:=cantidad_rentas_mes_usuario;$cantidad_rentas_peliculas_ano:=cantidad_rentas_pelicula_year;$cantidad_rentas_peliculas_mes_pais:=cantidad_rentas_pelicula_pais_mes;" guiName="DBOutputTable" guiX="2101" guiY="547" id="DBOUTPUT_TABLE" type="DB_OUTPUT_TABLE"/>
+<Node dbConnection="JDBC1" dbTable="payment_fact" fieldMap="$payment_id:=payment_id;$time_id:=time_id;$cantidad_pagos_dia:=cantidad_pagos_dia;" guiName="DBOutputTable" guiX="772" guiY="748" id="DBOUTPUT_TABLE1" type="DB_OUTPUT_TABLE"/>
+<Node guiName="ExtMergeJoin" guiX="848" guiY="217" id="EXT_MERGE_JOIN" joinKey="$customer_id(a);$year(a);$month(a);$day(a)#$customer_id(a);$year(a);$month(a);$day(a);" type="EXT_MERGE_JOIN">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.rental_id = $in.0.rental_id;
+	$out.0.film_id = $in.0.film_id;
+	$out.0.customer_id = $in.0.customer_id;
+	$out.0.store_id = $in.0.store_id;
+	$out.0.city_id = $in.0.city_id;
+	$out.0.time_id = $in.0.time_id;
+	$out.0.country = $in.0.country;
+	$out.0.year = $in.0.year;
+	$out.0.month = $in.0.month;
+	$out.0.day = $in.0.day;
+	$out.0.cantidad_rentas_dia = $in.0.cantidad_rentas_dia;
+	$out.0.cantidad_rentas_dia_usuario = $in.1.cantidad_rentas_dia_usuario;
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node guiName="ExtMergeJoin" guiX="1199" guiY="332" id="EXT_MERGE_JOIN1" joinKey="$customer_id(a);$year(a);$month(a)#$customer_id(a);$year(a);$month(a);" type="EXT_MERGE_JOIN">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.rental_id = $in.0.rental_id;
+	$out.0.film_id = $in.0.film_id;
+	$out.0.customer_id = $in.0.customer_id;
+	$out.0.store_id = $in.0.store_id;
+	$out.0.city_id = $in.0.city_id;
+	$out.0.time_id = $in.0.time_id;
+	$out.0.country = $in.0.country;
+	$out.0.year = $in.0.year;
+	$out.0.month = $in.0.month;
+	$out.0.day = $in.0.day;
+	$out.0.cantidad_rentas_dia = $in.0.cantidad_rentas_dia;
+	$out.0.cantidad_rentas_dia_usuario = $in.0.cantidad_rentas_dia_usuario;
+	$out.0.cantidad_rentas_mes_usuario = $in.1.cantidad_rentas_mes_usuario;
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node guiName="ExtMergeJoin" guiX="1559" guiY="442" id="EXT_MERGE_JOIN2" joinKey="$year(a);$film_id(a)#$year(a);$film_id(a);" type="EXT_MERGE_JOIN">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.rental_id = $in.0.rental_id;
+	$out.0.film_id = $in.0.film_id;
+	$out.0.customer_id = $in.0.customer_id;
+	$out.0.store_id = $in.0.store_id;
+	$out.0.city_id = $in.0.city_id;
+	$out.0.time_id = $in.0.time_id;
+	$out.0.country = $in.0.country;
+	$out.0.year = $in.0.year;
+	$out.0.month = $in.0.month;
+	$out.0.day = $in.0.day;
+	$out.0.cantidad_rentas_dia = $in.0.cantidad_rentas_dia;
+	$out.0.cantidad_rentas_dia_usuario = $in.0.cantidad_rentas_dia_usuario;
+	$out.0.cantidad_rentas_mes_usuario = $in.0.cantidad_rentas_mes_usuario;
+	$out.0.cantidad_rentas_peliculas_ano = $in.1.cantidad_rentas_peliculas_ano;
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node guiName="ExtMergeJoin" guiX="1916" guiY="534" id="EXT_MERGE_JOIN3" joinKey="$year(a);$month(a);$film_id(a);$country(a)#$year(a);$month(a);$film_id(a);$country_name(a);" joinType="inner" type="EXT_MERGE_JOIN">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.rental_id = $in.0.rental_id;
+	$out.0.film_id = $in.0.film_id;
+	$out.0.customer_id = $in.0.customer_id;
+	$out.0.store_id = $in.0.store_id;
+	$out.0.city_id = $in.0.city_id;
+	$out.0.time_id = $in.0.time_id;
+	$out.0.country = $in.0.country;
+	$out.0.year = $in.0.year;
+	$out.0.month = $in.0.month;
+	$out.0.day = $in.0.day;
+	$out.0.cantidad_rentas_dia = $in.0.cantidad_rentas_dia;
+	$out.0.cantidad_rentas_dia_usuario = $in.0.cantidad_rentas_dia_usuario;
+	$out.0.cantidad_rentas_mes_usuario = $in.0.cantidad_rentas_mes_usuario;
+	$out.0.cantidad_rentas_peliculas_ano = $in.0.cantidad_rentas_peliculas_ano;
+	$out.0.cantidad_rentas_peliculas_mes_pais = $in.1.cantidad_rentas_peliculas_mes_pais;
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node guiName="ExtMergeJoin" guiX="518" guiY="728" id="EXT_MERGE_JOIN4" joinKey="$time_id(a)#$time_id(a);" type="EXT_MERGE_JOIN">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.payment_id = $in.0.payment_id;
+	$out.0.time_id = $in.0.time_id;
+	$out.0.cantidad_pagos_dia = $in.1.cantidad_pagos_dia;
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node guiName="ExtMergeJoinTimeRental" guiX="473" guiY="138" id="EXT_MERGE_JOIN_TIME_RENTAL" joinKey="$time_id(a)#$time_id(a);" joinType="inner" type="EXT_MERGE_JOIN">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.rental_id = $in.0.rental_id;
+	$out.0.film_id = $in.0.film_id;
+	$out.0.customer_id = $in.0.customer_id;
+	$out.0.store_id = $in.0.store_id;
+	$out.0.city_id = $in.0.city_id;
+	$out.0.time_id = $in.0.time_id;
+	$out.0.country = $in.0.country;
+	$out.0.year = $in.0.year;
+	$out.0.month = $in.0.month;
+	$out.0.day = $in.0.day;
+	$out.0.cantidad_rentas_dia = $in.1.cantidad_rentas_dia;
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node guiName="FastSort" guiX="298" guiY="180" id="FAST_SORT" sortKey="time_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="298" guiY="283" id="FAST_SORT1" sortKey="customer_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="298" guiY="684" id="FAST_SORT10" sortKey="time_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="298" guiY="773" id="FAST_SORT11" sortKey="time_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="683" guiY="154" id="FAST_SORT2" sortKey="customer_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="298" guiY="376" id="FAST_SORT3" sortKey="customer_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="1030" guiY="246" id="FAST_SORT4" sortKey="customer_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="298" guiY="473" id="FAST_SORT5" sortKey="year(a);film_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="1388" guiY="362" id="FAST_SORT6" sortKey="year(a);film_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="298" guiY="88" id="FAST_SORT7" sortKey="time_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="298" guiY="579" id="FAST_SORT8" sortKey="year(a);month(a);film_id(a);country_name(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="1733" guiY="479" id="FAST_SORT9" sortKey="year(a);month(a);film_id(a);country(a)" type="FAST_SORT"/>
+<Edge fromNode="DBINPUT_BASIC_DATA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge35" inPort="Port 0 (in)" metadata="Metadata18" outPort="Port 0 (out)" toNode="FAST_SORT7:0"/>
+<Edge fromNode="DBINPUT_BASIC_PAYMENT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge8" inPort="Port 0 (in)" metadata="Metadata34" outPort="Port 0 (out)" toNode="FAST_SORT10:0"/>
+<Edge fromNode="DBINPUT_PAGOS_DIA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge9" inPort="Port 0 (in)" metadata="Metadata35" outPort="Port 0 (out)" toNode="FAST_SORT11:0"/>
+<Edge fromNode="DBINPUT_RENTAS_DIA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge36" inPort="Port 0 (in)" metadata="Metadata19" outPort="Port 0 (out)" toNode="FAST_SORT:0"/>
+<Edge fromNode="DBINPUT_RENTAS_DIA_USUARIO:0" guiBendpoints="" guiRouter="Manhattan" id="Edge41" inPort="Port 0 (in)" metadata="Metadata21" outPort="Port 0 (out)" toNode="FAST_SORT1:0"/>
+<Edge fromNode="DBINPUT_RENTAS_MES_USUARIO:0" guiBendpoints="" guiRouter="Manhattan" id="Edge49" inPort="Port 0 (in)" metadata="Metadata25" outPort="Port 0 (out)" toNode="FAST_SORT3:0"/>
+<Edge fromNode="DBINPUT_RENTAS_PELICULAS_ANO:0" guiBendpoints="" guiRouter="Manhattan" id="Edge52" inPort="Port 0 (in)" metadata="Metadata26" outPort="Port 0 (out)" toNode="FAST_SORT5:0"/>
+<Edge fromNode="DBINPUT_RENTAS_PELICULAS_MES_PAIS:0" guiBendpoints="" guiRouter="Manhattan" id="Edge56" inPort="Port 0 (in)" metadata="Metadata29" outPort="Port 0 (out)" toNode="FAST_SORT8:0"/>
+<Edge fromNode="EXT_MERGE_JOIN:0" guiBendpoints="" guiRouter="Manhattan" id="Edge44" inPort="Port 0 (in)" metadata="Metadata22" outPort="Port 0 (out)" toNode="FAST_SORT4:0"/>
+<Edge fromNode="EXT_MERGE_JOIN1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge54" inPort="Port 0 (in)" metadata="Metadata28" outPort="Port 0 (out)" toNode="FAST_SORT6:0"/>
+<Edge fromNode="EXT_MERGE_JOIN2:0" guiBendpoints="" guiRouter="Manhattan" id="Edge51" inPort="Port 0 (in)" metadata="Metadata27" outPort="Port 0 (out)" toNode="FAST_SORT9:0"/>
+<Edge fromNode="EXT_MERGE_JOIN3:0" guiBendpoints="" guiRouter="Manhattan" id="Edge64" inPort="Port 0 (in)" metadata="Metadata33" outPort="Port 0 (out)" toNode="DBOUTPUT_TABLE:0"/>
+<Edge fromNode="EXT_MERGE_JOIN4:0" guiBendpoints="" guiRouter="Manhattan" id="Edge12" inPort="Port 0 (in)" metadata="Metadata38" outPort="Port 0 (out)" toNode="DBOUTPUT_TABLE1:0"/>
+<Edge fromNode="EXT_MERGE_JOIN_TIME_RENTAL:0" guiBendpoints="" guiRouter="Manhattan" id="Edge40" inPort="Port 0 (in)" metadata="Metadata20" outPort="Port 0 (out)" toNode="FAST_SORT2:0"/>
+<Edge fromNode="FAST_SORT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge38" inPort="Port 1 (slave)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN_TIME_RENTAL:1"/>
+<Edge fromNode="FAST_SORT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge42" inPort="Port 1 (slave)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN:1"/>
+<Edge fromNode="FAST_SORT10:0" guiBendpoints="" guiRouter="Manhattan" id="Edge10" inPort="Port 0 (driver)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN4:0"/>
+<Edge fromNode="FAST_SORT11:0" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 1 (slave)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN4:1"/>
+<Edge fromNode="FAST_SORT2:0" guiBendpoints="" guiRouter="Manhattan" id="Edge43" inPort="Port 0 (driver)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN:0"/>
+<Edge fromNode="FAST_SORT3:0" guiBendpoints="" guiRouter="Manhattan" id="Edge48" inPort="Port 1 (slave)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN1:1"/>
+<Edge fromNode="FAST_SORT4:0" guiBendpoints="" guiRouter="Manhattan" id="Edge46" inPort="Port 0 (driver)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN1:0"/>
+<Edge fromNode="FAST_SORT5:0" guiBendpoints="" guiRouter="Manhattan" id="Edge53" inPort="Port 1 (slave)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN2:1"/>
+<Edge fromNode="FAST_SORT6:0" guiBendpoints="" guiRouter="Manhattan" id="Edge55" inPort="Port 0 (driver)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN2:0"/>
+<Edge fromNode="FAST_SORT7:0" guiBendpoints="" guiRouter="Manhattan" id="Edge37" inPort="Port 0 (driver)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN_TIME_RENTAL:0"/>
+<Edge fromNode="FAST_SORT8:0" guiBendpoints="" guiRouter="Manhattan" id="Edge59" inPort="Port 1 (slave)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN3:1"/>
+<Edge fromNode="FAST_SORT9:0" guiBendpoints="" guiRouter="Manhattan" id="Edge57" inPort="Port 0 (driver)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN3:0"/>
+</Phase>
+</Graph>

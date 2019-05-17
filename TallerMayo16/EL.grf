@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Graph author="ejrmontoya" created="Thu May 16 12:47:41 COT 2019" guiVersion="5.2.0.30" id="1558029267024" licenseCode="Unlicensed" name="ETL" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata3">
+<Record fieldDelimiter="|" name="c1" recordDelimiter="\n" type="delimited">
+<Field name="location_id" size="5" trim="true" type="integer"/>
+<Field name="city" size="50" type="string"/>
+<Field name="country" size="50" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata8">
+<Record fieldDelimiter=";" name="category" recordDelimiter="\n" type="delimited">
+<Field name="category_id" size="3" type="integer"/>
+<Field name="name" size="25" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata1">
+<Record fieldDelimiter=";" name="city" recordDelimiter="\n" type="delimited">
+<Field name="city_id" size="5" type="integer"/>
+<Field name="city" size="50" type="string"/>
+<Field name="country_id" size="5" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata0">
+<Record fieldDelimiter=";" name="city" previewAttachmentCharset="UTF-8" recordDelimiter="\n" type="delimited">
+<Field name="city_id" size="5" type="integer"/>
+<Field name="city" size="50" type="string"/>
+<Field name="country_id" size="5" type="integer"/>
+<Field format="yyyy-MM-dd HH:mm:ss" name="last_update" size="19" type="date"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata2">
+<Record fieldDelimiter=";" name="country" recordDelimiter="\n" type="delimited">
+<Field name="country_id" size="5" type="integer"/>
+<Field name="country" size="50" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata4">
+<Record fieldDelimiter=";" name="customer" recordDelimiter="\n" type="delimited">
+<Field name="customer_id" size="5" type="integer"/>
+<Field name="first_name" size="45" type="string"/>
+<Field name="last_name" size="45" type="string"/>
+<Field name="email" size="50" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata6">
+<Record fieldDelimiter=";" name="film" recordDelimiter="\n" type="delimited">
+<Field name="film_id" size="5" type="integer"/>
+<Field name="title" size="255" type="string"/>
+<Field length="4" name="rental_rate" scale="2" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata10">
+<Record fieldDelimiter="|" name="film" recordDelimiter="\n" type="delimited">
+<Field name="film_id" size="5" trim="true" type="integer"/>
+<Field name="title" size="255" type="string"/>
+<Field length="4" name="rental_rate" scale="2" trim="true" type="decimal"/>
+<Field name="category_id" size="3" trim="true" type="integer"/>
+<Field name="name" size="25" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata7">
+<Record fieldDelimiter=";" name="film_category" recordDelimiter="\n" type="delimited">
+<Field name="film_id" size="5" type="integer"/>
+<Field name="category_id" size="3" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata9">
+<Record fieldDelimiter="|" name="outf_fc" recordDelimiter="\n" type="delimited">
+<Field name="film_id" size="5" trim="true" type="integer"/>
+<Field name="title" size="255" type="string"/>
+<Field length="4" name="rental_rate" scale="2" trim="true" type="decimal"/>
+<Field name="category_id" size="3" trim="true" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata5">
+<Record fieldDelimiter=";" name="store" recordDelimiter="\n" type="delimited">
+<Field name="store_id" size="3" type="integer"/>
+</Record>
+</Metadata>
+<Connection database="MYSQL" dbURL="jdbc:mysql://localhost:3306/sakila_olap" id="JDBC1" jdbcSpecific="MYSQL" name="in/out" password="passw0rd" type="JDBC" useSSL="false" user="root"/>
+<GraphParameters>
+<GraphParameterFile fileURL="workspace.prm"/>
+</GraphParameters>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node dbConnection="JDBC1" guiName="DBINPUTCOUNTRY" guiX="42" guiY="458" id="DBINPUTCOUNTRY" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[select `sakila`.`country`.`country_id`,`sakila`.`country`.`country`
+from `sakila`.`country`]]></attr>
+</Node>
+<Node dbConnection="JDBC1" guiName="DBINPUTCUSTOMER" guiX="47" guiY="247" id="DBINPUTFILM1" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[select `sakila`.`customer`.`customer_id`,`sakila`.`customer`.`first_name`,`sakila`.`customer`.`last_name`,`sakila`.`customer`.`email`
+from `sakila`.`customer`]]></attr>
+</Node>
+<Node dbConnection="JDBC1" guiName="DBINPUTCITY" guiX="52" guiY="354" id="DBINPUTFILM2" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[select `sakila`.`city`.`city_id`,`sakila`.`city`.`city`,`sakila`.`city`.`country_id`
+from `sakila`.`city`]]></attr>
+</Node>
+<Node dbConnection="JDBC1" guiName="DBINPUTSTORE" guiX="52" guiY="165" id="DBINPUTFILM3" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[select `sakila`.`store`.`store_id`
+from `sakila`.`store`]]></attr>
+</Node>
+<Node dbConnection="JDBC1" guiName="DBINPUTFILMCATEGORY" guiX="51" guiY="-54" id="DBINPUTFILM4" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[select `sakila`.`film_category`.`film_id`,`sakila`.`film_category`.`category_id`
+from `sakila`.`film_category`]]></attr>
+</Node>
+<Node dbConnection="JDBC1" guiName="DBINPUTFILM" guiX="56" guiY="-173" id="DBINPUTFILM5" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[select `sakila`.`film`.`film_id`,`sakila`.`film`.`title`,`sakila`.`film`.`rental_rate`
+from `sakila`.`film`]]></attr>
+</Node>
+<Node dbConnection="JDBC1" guiName="DBINPUTCATEGORY" guiX="65" guiY="58" id="DBINPUTFILM6" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[select `sakila`.`category`.`category_id`,`sakila`.`category`.`name`
+from `sakila`.`category`]]></attr>
+</Node>
+<Node dbConnection="JDBC1" dbTable="location_dimension" fieldMap="$location_id:=location_id;$city:=city_name;$country:=country_name;" guiName="DBOutputTable" guiX="653" guiY="458" id="DBOUTPUT_TABLE" type="DB_OUTPUT_TABLE"/>
+<Node dbConnection="JDBC1" dbTable="customer_dimension" fieldMap="$customer_id:=customer_id;$first_name:=first_name;$last_name:=last_name;$email:=email;" guiName="DBOutputTable" guiX="653" guiY="247" id="DBOUTPUT_TABLE1" type="DB_OUTPUT_TABLE"/>
+<Node dbConnection="JDBC1" dbTable="store_dimension" fieldMap="$store_id:=store_id;" guiName="DBOutputTable" guiX="653" guiY="165" id="DBOUTPUT_TABLE2" type="DB_OUTPUT_TABLE"/>
+<Node dbConnection="JDBC1" dbTable="film_dimension" fieldMap="$film_id:=film_id;$category_id:=category_id;$title:=title;$name:=category_name;$rental_rate:=rental_rate;" guiName="DBOutputTable" guiX="1004" guiY="64" id="DBOUTPUT_TABLE3" type="DB_OUTPUT_TABLE"/>
+<Node guiName="ExtMergeJoin" guiX="449" guiY="430" id="EXT_MERGE_JOIN" joinKey="$country_id(a)#$country_id(a);" type="EXT_MERGE_JOIN">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.location_id = $in.0.city_id;
+	$out.0.city = $in.0.city;
+	$out.0.country = $in.1.country;
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node guiName="ExtMergeJoin" guiX="492" guiY="-109" id="EXT_MERGE_JOIN1" joinKey="$film_id(a)#$film_id(a);" type="EXT_MERGE_JOIN">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.film_id = $in.0.film_id;
+	$out.0.title = $in.0.title;
+	$out.0.rental_rate = $in.0.rental_rate;
+	$out.0.category_id = $in.1.category_id;
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node guiName="ExtMergeJoin" guiX="827" guiY="64" id="EXT_MERGE_JOIN2" joinKey="$category_id(a)#$category_id(a);" type="EXT_MERGE_JOIN">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.film_id = $in.0.film_id;
+	$out.0.title = $in.0.title;
+	$out.0.rental_rate = $in.0.rental_rate;
+	$out.0.category_id = $in.1.category_id;
+	$out.0.name = $in.1.name;
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node guiName="FastSort" guiX="215" guiY="354" id="FAST_SORT" sortKey="country_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="228" guiY="496" id="FAST_SORT1" sortKey="country_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="280" guiY="-173" id="FAST_SORT2" sortKey="film_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="280" guiY="-54" id="FAST_SORT3" sortKey="film_id(a);category_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="280" guiY="58" id="FAST_SORT4" sortKey="category_id(a)" type="FAST_SORT"/>
+<Node guiName="FastSort" guiX="653" guiY="-109" id="FAST_SORT5" sortKey="category_id(a)" type="FAST_SORT"/>
+<Edge fromNode="DBINPUTCOUNTRY:0" guiBendpoints="" guiRouter="Manhattan" id="Edge2" inPort="Port 0 (in)" metadata="Metadata2" outPort="Port 0 (out)" toNode="FAST_SORT1:0"/>
+<Edge fromNode="DBINPUTFILM1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge7" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (out)" toNode="DBOUTPUT_TABLE1:0"/>
+<Edge fromNode="DBINPUTFILM2:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (out)" toNode="FAST_SORT:0"/>
+<Edge fromNode="DBINPUTFILM3:0" guiBendpoints="" guiRouter="Manhattan" id="Edge8" inPort="Port 0 (in)" metadata="Metadata5" outPort="Port 0 (out)" toNode="DBOUTPUT_TABLE2:0"/>
+<Edge fromNode="DBINPUTFILM4:0" guiBendpoints="" guiRouter="Manhattan" id="Edge10" inPort="Port 0 (in)" metadata="Metadata7" outPort="Port 0 (out)" toNode="FAST_SORT3:0"/>
+<Edge fromNode="DBINPUTFILM5:0" guiBendpoints="" guiRouter="Manhattan" id="Edge9" inPort="Port 0 (in)" metadata="Metadata6" outPort="Port 0 (out)" toNode="FAST_SORT2:0"/>
+<Edge fromNode="DBINPUTFILM6:0" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 0 (in)" metadata="Metadata8" outPort="Port 0 (out)" toNode="FAST_SORT4:0"/>
+<Edge fromNode="EXT_MERGE_JOIN:0" guiBendpoints="" guiRouter="Manhattan" id="Edge4" inPort="Port 0 (in)" metadata="Metadata3" outPort="Port 0 (out)" toNode="DBOUTPUT_TABLE:0"/>
+<Edge fromNode="EXT_MERGE_JOIN1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge19" inPort="Port 0 (in)" metadata="Metadata9" outPort="Port 0 (out)" toNode="FAST_SORT5:0"/>
+<Edge fromNode="EXT_MERGE_JOIN2:0" guiBendpoints="" guiRouter="Manhattan" id="Edge21" inPort="Port 0 (in)" metadata="Metadata10" outPort="Port 0 (out)" toNode="DBOUTPUT_TABLE3:0"/>
+<Edge fromNode="FAST_SORT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge5" inPort="Port 0 (driver)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN:0"/>
+<Edge fromNode="FAST_SORT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge6" inPort="Port 1 (slave)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN:1"/>
+<Edge fromNode="FAST_SORT2:0" guiBendpoints="" guiRouter="Manhattan" id="Edge17" inPort="Port 0 (driver)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN1:0"/>
+<Edge fromNode="FAST_SORT3:0" guiBendpoints="" guiRouter="Manhattan" id="Edge18" inPort="Port 1 (slave)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN1:1"/>
+<Edge fromNode="FAST_SORT4:0" guiBendpoints="" guiRouter="Manhattan" id="Edge20" inPort="Port 1 (slave)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN2:1"/>
+<Edge fromNode="FAST_SORT5:0" guiBendpoints="" guiRouter="Manhattan" id="Edge22" inPort="Port 0 (driver)" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN2:0"/>
+</Phase>
+</Graph>
